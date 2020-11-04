@@ -17,6 +17,10 @@ Python run_db.py
 Run db with seed
 Python run_db_seed.py
 
+docker
+docker build -t mypyimage .
+docker run -d --name mypycontainer -p 8000:80 mypyimage
+
 https://fastapi.tiangolo.com/tutorial/debugging/
 
 Api Doc
