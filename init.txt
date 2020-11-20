@@ -63,6 +63,8 @@ docker rm my_container
 docker image ls
 docker rmi Image Image
 
+yml issue http://yaml-online-parser.appspot.com/
+
 pip install c
 https://stackoverflow.com/questions/46041719/windows-reports-error-when-trying-to-install-package-using-pipenv
 python -m pipenv install fastapi

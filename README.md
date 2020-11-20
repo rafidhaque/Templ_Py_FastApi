@@ -21,6 +21,10 @@ docker
 docker build -t mypyimage .
 docker run -d --name mypycontainer -p 8000:80 mypyimage
 
+docker-compose up
+docker-compose up -d
+
+
 https://fastapi.tiangolo.com/tutorial/debugging/
 
 Api Doc

@@ -1,8 +1,7 @@
-FROM python:3.8.2
-COPY requirements.txt /
+FROM python:3.8.5
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /src
+WORKDIR /src
+COPY requirements.txt /src
 RUN pip install --no-cache-dir -r requirements.txt
-EXPOSE 80
-COPY ./__temp_app__ /__temp_app__
-COPY ./db /db
-COPY ./app /app
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+COPY . /src

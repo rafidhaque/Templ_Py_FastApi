@@ -1,6 +1,6 @@
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.responses import JSONResponse
-
+from loguru import logger
 
 from app.api import item_api, user_api, employee_api, error_api
 from app.errors import UnicornException
@@ -29,6 +29,9 @@ async def unicorn_exception_handler(request: Request, exc: UnicornException):
 @app.exception_handler(Exception)
 async def exception_handler(request: Request, exc: Exception):
     # print(f"OMG! An HTTP error!: {repr(exc)}")
+    logger.add("file_{time}.log")
+    logger.error(exc.message)
+
     return JSONResponse(
         status_code=500,
         content={"message": "Internal Server Error"},
