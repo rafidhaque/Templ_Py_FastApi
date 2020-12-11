@@ -31,22 +31,23 @@ class Keycloak:
 
     # 127.0.0.1
     # host.docker.internal
+    # 172.17.0.1
 
 
-    keycloak_openid = KeycloakOpenID(server_url="http://127.0.0.1:7003/auth/",
+    keycloak_openid = KeycloakOpenID(server_url="http://172.17.0.1:7003/auth/",
                     client_id="jwt-client", #new clreated inside dev realm
                     realm_name="dev",
                     client_secret_key="10687854-c643-4f58-81b1-02f2a0e0b1cb")
 
     # working from master
-    # keycloak_admin = KeycloakAdmin(server_url="http://127.0.0.1:7003/auth/",
+    # keycloak_admin = KeycloakAdmin(server_url="http://172.17.0.1:7003/auth/",
     #                            username='admin',
     #                            password='adminpass',
     #                            realm_name="master",
     #                            verify=False
     #                            )
 
-    # keycloak_admin = KeycloakAdmin(server_url="http://127.0.0.1:7003/auth/",
+    # keycloak_admin = KeycloakAdmin(server_url="http://172.17.0.1:7003/auth/",
     #                         username='dev-admin',
     #                         password='adminpass',
     #                         realm_name="master",
@@ -56,7 +57,7 @@ class Keycloak:
     #                         verify=False
     #                         )
 
-    keycloak_admin = KeycloakAdmin(server_url="http://127.0.0.1:7003/auth/",
+    keycloak_admin = KeycloakAdmin(server_url="http://172.17.0.1:7003/auth/",
                             username='dev-admin-user',
                             password='adminpass',
                             realm_name="dev",
