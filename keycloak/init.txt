@@ -48,3 +48,5 @@ https://stackoverflow.com/questions/44752273/do-keycloak-clients-have-a-client-s
 
 https://stackoverflow.com/questions/53538100/how-to-get-client-secret-via-keycloak-api
 https://stackoverflow.com/questions/53372454/refresh-token-with-keycloak
+
+https://stackoverflow.com/questions/60051209/add-claims-to-access-token-keycloak

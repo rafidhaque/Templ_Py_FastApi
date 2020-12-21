@@ -34,20 +34,20 @@ class Keycloak:
     # 172.17.0.1
 
 
-    keycloak_openid = KeycloakOpenID(server_url="http://172.17.0.1:7003/auth/",
+    keycloak_openid = KeycloakOpenID(server_url="http://127.0.0.1:7003/auth/",
                     client_id="jwt-client", #new clreated inside dev realm
                     realm_name="dev",
                     client_secret_key="10687854-c643-4f58-81b1-02f2a0e0b1cb")
 
     # working from master
-    # keycloak_admin = KeycloakAdmin(server_url="http://172.17.0.1:7003/auth/",
+    # keycloak_admin = KeycloakAdmin(server_url="http://127.0.0.1:7003/auth/",
     #                            username='admin',
     #                            password='adminpass',
     #                            realm_name="master",
     #                            verify=False
     #                            )
 
-    # keycloak_admin = KeycloakAdmin(server_url="http://172.17.0.1:7003/auth/",
+    # keycloak_admin = KeycloakAdmin(server_url="http://127.0.0.1:7003/auth/",
     #                         username='dev-admin',
     #                         password='adminpass',
     #                         realm_name="master",
@@ -57,7 +57,7 @@ class Keycloak:
     #                         verify=False
     #                         )
 
-    keycloak_admin = KeycloakAdmin(server_url="http://172.17.0.1:7003/auth/",
+    keycloak_admin = KeycloakAdmin(server_url="http://127.0.0.1:7003/auth/",
                             username='dev-admin-user',
                             password='adminpass',
                             realm_name="dev",
@@ -98,8 +98,19 @@ class Keycloak:
 
     @router.get("/user-from-token")
     def get_user_from_token(self, access_token: str = Header(...)):
-        user = self.keycloak_openid.userinfo(access_token)
-        return { "access_token": access_token, "user": user}
+        token_user = self.keycloak_openid.userinfo(access_token)
+
+
+        # KEYCLOAK_PUBLIC_KEY = self.keycloak_openid.public_key()
+        # options = {"verify_signature": True, "verify_aud": True, "verify_exp": True}
+        # decode_user = self.keycloak_openid.decode_token(access_token, key=KEYCLOAK_PUBLIC_KEY, options=options)
+        
+        full_user = self.keycloak_admin.get_user(token_user["sub"])
+
+
+        return { "access_token": access_token, "token_user": token_user, "full_user": full_user}
+
+
 
 
 

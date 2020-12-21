@@ -1,72 +1,50 @@
-python --version
-Python 3.8.2
-
-pip --version
-pip 20.2.3
+https://www.keycloak.org/getting-started/getting-started-docker
+https://hub.docker.com/r/jboss/keycloak/
+https://github.com/keycloak/keycloak-containers/blob/master/docker-compose-examples/keycloak-postgres.yml
 
 
-
-alembic, sqlalchemy, 
-https://www.youtube.com/watch?v=woKYyhLCcnU
-
-onion architecture 
+https://www.youtube.com/watch?v=NZI3C6vdjQk
+https://www.youtube.com/watch?v=duawSV69LDI
 
 
-python -m cookiecutter https://github.com/tiangolo/full-stack-fastapi-postgresql
+use local host in side docker
+https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach
+https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach/52858101#52858101
+https://dev.to/natterstefan/docker-tip-how-to-get-host-s-ip-address-inside-a-docker-container-5anh
 
-Fast Api:
-https://fastapi.tiangolo.com/
+keycloak in python:
+https://pypi.org/project/python-keycloak/
+https://python-keycloak-client.readthedocs.io/en/latest/
 
-1-5 tutorials
-https://www.youtube.com/watch?v=5GorMC2lPpk
-
-https://www.youtube.com/watch?v=syf6ZSiRSbw
-https://www.youtube.com/watch?v=kCggyi_7pHg
-https://www.youtube.com/watch?v=Vcqc4GzDvbI
+Social:
+https://symbiotics.co.za/keycloak-social-login-and-sso-solution/
 
 
 
-layout:
-https://realpython.com/python-application-layouts/
+keycloak
+http://localhost:7003/
+admin
+Pa55w0rd
+
+PgAdmin
+http://localhost:7002/
+user: admin@linuxhint.com
+password: secret
+
+    add new server
+    host name: db_keycloak
+    port: 5432
+    db: keycloak
+    user: admin
+    password: secret
 
 
+master user: d247feda-a03d-4b5e-84f0-e5e87a04c3e7
+dev user: ec57763d-bb99-408a-ad57-d0c08cbc09a2
 
-requirements.txt
-https://note.nkmk.me/en/python-pip-install-requirements/
-https://blog.usejournal.com/why-and-how-to-make-a-requirements-txt-f329c685181e
+https://stackoverflow.com/questions/61777235/keycloak-manage-realm-with-user-from-different-realm
 
-pip install --no-cache-dir -r requirements.txt
-pip install -r requirements.txt
-python run.py
+https://stackoverflow.com/questions/44752273/do-keycloak-clients-have-a-client-secret
 
-Ts:
-tsx: https://blog.logrocket.com/how-why-a-guide-to-using-typescript-with-react-fffb76c61614/
-Axios Mok:
-https://wanago.io/2018/09/17/javascript-testing-tutorial-part-four-mocking-api-calls-and-simulating-react-components-interactions/
-
-
-naming conventions:
--------------------
-Ts: https://basarat.gitbook.io/typescript/styleguide
-Py: https://www.python.org/dev/peps/pep-0008/
-Api: https://restfulapi.net/resource-naming/
-postgres: https://martendb.io/documentation/postgres/naming/
-
-
-
-docker:
-docker ps -aq
-docker stop my_container
-docker rm my_container
-
-
-docker image ls
-docker rmi Image Image
-
-yml issue http://yaml-online-parser.appspot.com/
-
-pip install c
-https://stackoverflow.com/questions/46041719/windows-reports-error-when-trying-to-install-package-using-pipenv
-python -m pipenv install fastapi
-
-https://pipenv-fork.readthedocs.io/en/latest/basics.html
+https://stackoverflow.com/questions/53538100/how-to-get-client-secret-via-keycloak-api
+https://stackoverflow.com/questions/53372454/refresh-token-with-keycloak

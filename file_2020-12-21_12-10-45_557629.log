@@ -1,0 +1,1 @@
+2020-12-21 12:10:45.568 | ERROR    | app.main:exception_handler:34 - 401: b'{"error":"invalid_grant","error_description":"Invalid user credentials"}'
