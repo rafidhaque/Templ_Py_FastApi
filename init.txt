@@ -1,0 +1,72 @@
+python --version
+Python 3.8.2
+
+pip --version
+pip 20.2.3
+
+
+
+alembic, sqlalchemy, 
+https://www.youtube.com/watch?v=woKYyhLCcnU
+
+onion architecture 
+
+
+python -m cookiecutter https://github.com/tiangolo/full-stack-fastapi-postgresql
+
+Fast Api:
+https://fastapi.tiangolo.com/
+
+1-5 tutorials
+https://www.youtube.com/watch?v=5GorMC2lPpk
+
+https://www.youtube.com/watch?v=syf6ZSiRSbw
+https://www.youtube.com/watch?v=kCggyi_7pHg
+https://www.youtube.com/watch?v=Vcqc4GzDvbI
+
+
+
+layout:
+https://realpython.com/python-application-layouts/
+
+
+
+requirements.txt
+https://note.nkmk.me/en/python-pip-install-requirements/
+https://blog.usejournal.com/why-and-how-to-make-a-requirements-txt-f329c685181e
+
+pip install --no-cache-dir -r requirements.txt
+pip install -r requirements.txt
+python run.py
+
+Ts:
+tsx: https://blog.logrocket.com/how-why-a-guide-to-using-typescript-with-react-fffb76c61614/
+Axios Mok:
+https://wanago.io/2018/09/17/javascript-testing-tutorial-part-four-mocking-api-calls-and-simulating-react-components-interactions/
+
+
+naming conventions:
+-------------------
+Ts: https://basarat.gitbook.io/typescript/styleguide
+Py: https://www.python.org/dev/peps/pep-0008/
+Api: https://restfulapi.net/resource-naming/
+postgres: https://martendb.io/documentation/postgres/naming/
+
+
+
+docker:
+docker ps -aq
+docker stop my_container
+docker rm my_container
+
+
+docker image ls
+docker rmi Image Image
+
+yml issue http://yaml-online-parser.appspot.com/
+
+pip install c
+https://stackoverflow.com/questions/46041719/windows-reports-error-when-trying-to-install-package-using-pipenv
+python -m pipenv install fastapi
+
+https://pipenv-fork.readthedocs.io/en/latest/basics.html
