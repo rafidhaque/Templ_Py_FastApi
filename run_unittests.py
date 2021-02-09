@@ -2,7 +2,7 @@ import os
 
 
 def run_tests():
-    os.system("alembic revision --autogenerate")
+    os.system("python -m unittest discover -s testing -p ""*_test.py""")
 
 
 if __name__ == "__main__":

@@ -17,6 +17,9 @@ Python run_db.py
 Run db with seed
 Python run_db_seed.py
 
+Run tests
+Python run_unittests.py
+
 docker
 docker build -t mypyimage .
 docker run -d --name mypycontainer -p 8000:80 mypyimage
